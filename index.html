@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just a Site</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+      }
+      .main-container {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100vh;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .hero-container {
+        width: inherit;
+      }
+
+      .SubNavBar {
+        height: 30px;
+        display: flex;
+        background: radial-gradient(circle, #1b3a56 20%, #000000 80%);
+        justify-content: space-around;
+        position: sticky;
+        top: 0;
+        width: 100vw;
+        animation: startup 1s 1 normal;
+        z-index: 1;
+      }
+
+      .SubNavContents {
+        width: 50%;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .MenuItems {
+        transition: all 0.25s;
+
+        color: white;
+      }
+      .SubNavContents:hover .MenuItems {
+        filter: blur(5px);
+      }
+      .SubNavContents:hover .MenuItems:hover {
+        filter: blur(0px);
+      }
+      .NavContents {
+        display: flex;
+        justify-content: space-around;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .hero-text {
+        margin-left: 20vw;
+        width: 50%;
+        height: 100%;
+        font-size: 32px;
+        color: white;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 7.5vw;
+      }
+      .header {
+        width: 100vw;
+        position: relative;
+        animation: startup 1s 1 normal;
+      }
+      .background {
+        width: inherit;
+      }
+      footer {
+        text-align: center;
+        color: black;
+        width: 100%;
+      }
+      section {
+        animation: section-startup 1s 1 normal;
+      }
+      @keyframes startup {
+        0% {
+          transform: rotateZ(-30deg) translateY(-300px);
+          opacity: 0;
+        }
+        25% {
+          opacity: 0.25;
+        }
+        75% {
+          opacity: 0.75;
+        }
+        100% {
+          transform: rotateZ(0deg) translateY(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes section-startup {
+        0% {
+          transform: translateY(300px);
+          opacity: 0;
+        }
+        25% {
+          opacity: 0.25;
+        }
+        75% {
+          opacity: 0.55;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="hero-container">
+        <div class="SubNavBar">
+          <div class="SubNavContents">
+            <div class="NavContents">
+              <a href="" class="MenuItems">Home</a>
+              <a href="" class="MenuItems">About</a>
+              <a href="" class="MenuItems">Contact Us</a>
+              <a href="" class="MenuItems">Menu</a>
+            </div>
+          </div>
+        </div>
+        <div class="header">
+          <div class="hero-text">
+            <h1>Science. Learn. Innovate.</h1>
+          </div>
+          <img class="background" src="background.jpg" alt="" />
+        </div>
+        <section>
+          <h2>Discover the Beauty of Bhopal</h2>
+          <p>
+            Bhopal is known for its rich heritage, stunning landscapes, and
+            vibrant culture. Explore its famous heritage sites, book a
+            comfortable stay, and enjoy breathtaking photos of the city.
+          </p>
+        </section>
+      </div>
+
+      <footer><p>&copy; 2025 Chinmay Gupta. DE22103</p></footer>
+    </div>
+  </body>
+</html>
